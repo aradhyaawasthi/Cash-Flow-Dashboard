@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Flow Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <h1>Cash Flow Dashboard</h1>
+    <div class="salary-section">
+
+    <label>Total Salary</label>
+
+    <input
+        type="number"
+        id="salaryInput"
+        placeholder="Enter Your Salary">
+
+
+</div>
+
+<div class="expense-section">
+    <label>Category</label>
+
+<select id="expenseCategory">
+    <option value="Food">Food</option>
+    <option value="Travel">Travel</option>
+    <option value="Shopping">Shopping</option>
+    <option value="Bills">Bills</option>
+    <option value="Education">Education</option>
+    <option value="Other">Other</option>
+</select>
+
+    <label>Expense Name</label>
+
+    <input
+        type="text"
+        id="expenseName"
+        placeholder="Enter Expense Name"
+    >
+
+    <label>Expense Amount</label>
+
+    <input
+        type="number"
+        id="expenseAmount"
+        placeholder="Enter Expense Amount"
+    >
+<button id="addExpenseBtn">
+    Add Expense 
+</button>
+
+<div class="summary-section">
+
+    <h2>Total Salary: ₹<span id="salaryDisplay">0</span></h2>
+
+    <h2>Total Expenses: ₹<span id="expenseDisplay">0</span></h2>
+
+    <h2>Remaining Balance: ₹<span id="balanceDisplay">0</span></h2>
+
+    <h2>Total Transactions:
+<span id="transactionCount">0</span>
+</h2>
+
+</div>
+
+
+<div class="expense-list-section">
+
+    <h2>Expense List</h2>
+    <p id="emptyMessage">No expenses added yet</p>
+
+    <ul id="expenseList">
+
+    </ul>
+    <h2>Expense Analytics</h2>
+<canvas id="expenseChart"></canvas>
+
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+<footer>
+    <p>Expense Tracker Dashboard | Developed by Aradhya</p>
+</footer>
+</body>
+
+</html>
